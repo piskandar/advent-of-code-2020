@@ -12,4 +12,13 @@ class InputReader {
         }
         return emptyList()
     }
+
+    fun readFullInput(filePath: String): String? {
+        val path = Paths.get(filePath)
+        if(Files.exists(path)){
+            return Files.readString(path)
+        }
+
+        return null
+    }
 }
